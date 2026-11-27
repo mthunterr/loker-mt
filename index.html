@@ -9,35 +9,43 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@500&display=swap">
 <style>
-/* Layout: MT Hunter's dark green ground with a mint accent. A short hero, a filter bar, then one ruled list where each row leads with a big mint countdown (days left), like the numbered rows of the MT Hunter class outline. Single dark theme by brand choice. */
+/* Layout: MT Hunter's dark green band behind the hero, light mint-tinted ground for the list. A short hero, a filter bar, then one ruled list where each row leads with a big mint countdown (days left), like the numbered rows of the MT Hunter class outline. Single light theme with a dark brand band, by choice. */
 :root {
-  color-scheme: dark;
-  --ground: #0c1517;
-  --ground-top: #1f4d3f;
-  --ink: #f2f7f4;
-  --ink-soft: #b9c9c1;
-  --ink-faint: #7f948b;
-  --mint: #74e0ae;
-  --mint-deep: #0f2a22;
-  --rule: rgba(185, 201, 193, .16);
-  --panel: rgba(255, 255, 255, .04);
-  --warn: #f2c46b;
-  --warn-ground: rgba(242, 196, 107, .12);
-  --urgent: #ff9a85;
+  color-scheme: light;
+  --ground: #f3f8f5;
+  --ink: #12241d;
+  --ink-soft: #44584f;
+  --ink-faint: #6d8178;
+  --mint: #14845a;
+  --mint-deep: #ffffff;
+  --rule: rgba(18, 36, 29, .12);
+  --panel: #ffffff;
+  --warn: #8a5a00;
+  --warn-ground: #fbefd3;
+  --urgent: #d2553f;
+  /* Hero band: MT Hunter dark green */
+  --band-from: #2a6b55;
+  --band-to: #133a2f;
+  --band-ink: #f2f7f4;
+  --band-ink-soft: #c9dbd2;
+  --band-mint: #74e0ae;
   --f-sans: "DM Sans", "Segoe UI", system-ui, sans-serif;
   --f-mono: "DM Mono", ui-monospace, Menlo, monospace;
 }
 * { box-sizing: border-box; }
 html { background: var(--ground); }
-body { background: radial-gradient(120% 60rem at 0% 0%, var(--ground-top) 0%, var(--ground) 62%) no-repeat, var(--ground); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.55; min-height: 100vh; }
-.wrap { max-width: 64rem; margin: 0 auto; padding-block: 48px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.55; min-height: 100vh; }
+.wrap { max-width: 64rem; margin: 0 auto; padding-block: 28px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 h1, h2, h3 { margin: 0; line-height: 1.15; text-wrap: balance; }
 p { margin: 0; }
 a { color: inherit; }
 
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mint); }
 .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--mint); }
-.hero { display: grid; gap: 14px; padding-bottom: 28px; }
+.band { background: radial-gradient(70rem 40rem at 30% 0%, var(--band-from) 0%, var(--band-to) 70%); color: var(--band-ink); }
+.hero { display: grid; gap: 14px; max-width: 64rem; margin: 0 auto; padding-block: 48px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); color: var(--ink);
+  --ink: var(--band-ink); --ink-soft: var(--band-ink-soft); --mint: var(--band-mint); --rule: rgba(201, 219, 210, .22); --panel: rgba(255, 255, 255, .06); }
+.hero > * { min-width: 0; }
 h1 { font-size: clamp(2rem, 6vw, 3.1rem); font-weight: 800; letter-spacing: -.02em; max-width: 18ch; }
 .lede { color: var(--ink-soft); font-size: 1.05rem; max-width: 60ch; }
 .facts { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--ink-soft); font-size: .92rem; padding-top: 4px; }
@@ -90,7 +98,8 @@ details summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 
 .foot strong { color: var(--ink-soft); }
 
 @media (max-width: 600px) {
-  .wrap { padding-block: 32px 56px; }
+  .wrap { padding-block: 20px 56px; }
+  .hero { padding-block: 32px 32px; }
   .job { grid-template-columns: 1fr; }
   .count { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 8px; }
   .count .n { font-size: 2rem; }
@@ -110,7 +119,7 @@ details summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 
 .products .lede { font-size: 1rem; }
 .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 16px; }
 .prod { display: grid; gap: 14px; align-content: start; padding: 24px; border: 1px solid var(--rule); border-radius: 16px; background: var(--panel); }
-.prod.main { border-color: var(--mint); background: linear-gradient(160deg, rgba(116, 224, 174, .10), rgba(116, 224, 174, 0) 55%), var(--panel); }
+.prod.main { border-color: var(--mint); background: linear-gradient(160deg, rgba(20, 132, 90, .08), rgba(20, 132, 90, 0) 55%), var(--panel); }
 .prod h3 { font-size: 1.3rem; font-weight: 800; }
 .prod .price { font-size: 1.9rem; font-weight: 800; color: var(--mint); font-variant-numeric: tabular-nums; line-height: 1; }
 .prod .price small { font-size: .45em; color: var(--ink-soft); font-weight: 600; }
@@ -126,7 +135,7 @@ details summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 
 <body>
 
 
-<main class="wrap">
+<div class="band">
   <header class="hero">
     <span class="eyebrow">MT Hunter · Loker MT</span>
     <h1>Program Management Trainee yang masih buka</h1>
@@ -137,6 +146,9 @@ details summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 
       <a class="link-mint" href="https://mt-hunter.myscalev.com/e-courselolosmt" target="_blank" rel="noopener">Lihat e-course ↗</a>
     </div>
   </header>
+</div>
+
+<main class="wrap">
 
   <section class="bar" aria-label="Saring lowongan">
     <input class="search" id="q" type="search" placeholder="Cari perusahaan, program, atau jurusan" aria-label="Cari lowongan">
