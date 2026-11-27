@@ -95,6 +95,32 @@ details summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 
   .count { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 8px; }
   .count .n { font-size: 2rem; }
 }
+
+/* Promo */
+.promo-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 8px; padding: 12px 16px; border: 1px solid var(--rule); border-radius: 12px; background: var(--panel); max-width: 44rem; }
+.promo-line p { color: var(--ink-soft); font-size: .95rem; flex: 1 1 18rem; }
+.promo-line b { color: var(--ink); }
+.link-mint { color: var(--mint); font-weight: 700; text-decoration: none; white-space: nowrap; }
+.link-mint:hover { text-decoration: underline; text-underline-offset: 3px; }
+.link-mint:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; border-radius: 4px; }
+.cv-nudge { font-size: .88rem; color: var(--ink-soft); }
+.products { display: grid; gap: 18px; padding-top: 44px; }
+.products > header { display: grid; gap: 8px; }
+.products h2 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 800; letter-spacing: -.01em; }
+.products .lede { font-size: 1rem; }
+.prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 16px; }
+.prod { display: grid; gap: 14px; align-content: start; padding: 24px; border: 1px solid var(--rule); border-radius: 16px; background: var(--panel); }
+.prod.main { border-color: var(--mint); background: linear-gradient(160deg, rgba(116, 224, 174, .10), rgba(116, 224, 174, 0) 55%), var(--panel); }
+.prod h3 { font-size: 1.3rem; font-weight: 800; }
+.prod .price { font-size: 1.9rem; font-weight: 800; color: var(--mint); font-variant-numeric: tabular-nums; line-height: 1; }
+.prod .price small { font-size: .45em; color: var(--ink-soft); font-weight: 600; }
+.prod p { color: var(--ink-soft); font-size: .95rem; }
+.chapters { list-style: none; margin: 0; padding: 0; display: grid; }
+.chapters li { display: grid; grid-template-columns: 2.4rem 1fr; gap: 10px; padding-block: 8px; border-top: 1px solid var(--rule); font-size: .94rem; }
+.chapters li span { font-weight: 800; color: var(--mint); font-variant-numeric: tabular-nums; }
+.ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .94rem; color: var(--ink-soft); }
+.ticks li::before { content: "✓"; color: var(--mint); font-weight: 800; margin-right: 8px; }
+.prod .btn { justify-self: start; }
 </style>
 </head>
 <body>
@@ -106,6 +132,10 @@ details summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 
     <h1>Program Management Trainee yang masih buka</h1>
     <p class="lede">Daftar program MT dari perusahaan kredibel yang dikurasi tim MT Hunter, diurutkan dari deadline terdekat. Tanpa MLM, pialang, atau rekrutmen agen.</p>
     <p class="facts"><span>Update <b id="updated"></b></span><span><b id="nOpen">0</b> program buka</span><span><b id="nWeek">0</b> tutup dalam 7 hari</span></p>
+    <div class="promo-line">
+      <p><b>Mau lolos seleksi MT?</b> Pelajari apa yang sebenarnya dinilai recruiter lewat e-course 7 chapter MT Hunter.</p>
+      <a class="link-mint" href="https://mt-hunter.myscalev.com/e-courselolosmt" target="_blank" rel="noopener">Lihat e-course ↗</a>
+    </div>
   </header>
 
   <section class="bar" aria-label="Saring lowongan">
@@ -120,6 +150,46 @@ details summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 
     <ul class="list" id="closedList"></ul>
   </div>
 
+  <section class="products" id="persiapan" aria-labelledby="prod-h">
+    <header>
+      <span class="eyebrow">Persiapan dari MT Hunter</span>
+      <h2 id="prod-h">Sudah ketemu programnya? Siapkan dirimu sebelum seleksi</h2>
+      <p class="lede">Dibawakan Samuel Amarta, recruiter yang sudah mewawancarai lebih dari 1.000 kandidat dan merekrut lebih dari 400 peserta MT.</p>
+    </header>
+    <div class="prod-grid">
+      <article class="prod main">
+        <h3>E-Course Lolos MT</h3>
+        <p class="price">Rp129.000 <small>akses selamanya</small></p>
+        <p>7 video on-demand tentang apa yang dinilai recruiter di setiap tahap seleksi MT. Bisa ditonton di HP dan laptop.</p>
+        <ol class="chapters">
+          <li><span>01</span>Memahami Program MT</li>
+          <li><span>02</span>Membangun Pengalaman Leadership</li>
+          <li><span>03</span>Bedah CV MT</li>
+          <li><span>04</span>Simulasi Interview MT</li>
+          <li><span>05</span>Pertanyaan untuk Recruiter</li>
+          <li><span>06</span>Strategi Menghadapi FGD</li>
+          <li><span>07</span>Langkah Setelah Kelas</li>
+        </ol>
+        <p>Bonus: alat ChatGPT khusus untuk mereview CV dari sudut pandang recruiter MT.</p>
+        <a class="btn" href="https://mt-hunter.myscalev.com/e-courselolosmt" target="_blank" rel="noopener">Mulai belajar ↗</a>
+      </article>
+      <article class="prod">
+        <h3>Review CV untuk Posisi MT</h3>
+        <p class="price">Rp29rb <small>per posisi</small></p>
+        <p>Sudah berkali-kali melamar tapi belum dipanggil interview? Dapatkan laporan 5 halaman tentang kecocokan CV-mu dengan posisi yang kamu incar.</p>
+        <ul class="ticks">
+          <li>Skor kecocokan 0–100 dan risiko terbesar CV ditolak</li>
+          <li>Analisis gap dengan syarat posisi</li>
+          <li>5 langkah perbaikan berurutan prioritas</li>
+          <li>Contoh poin pengalaman yang sudah ditulis ulang</li>
+          <li>Persiapan interview dan checklist akhir</li>
+        </ul>
+        <p>Review 2 posisi sekaligus Rp39rb.</p>
+        <a class="btn" href="https://mt-hunter.myscalev.com/review-cv" target="_blank" rel="noopener">Review CV-mu sekarang ↗</a>
+      </article>
+    </div>
+  </section>
+
   <footer class="foot">
     <p><strong>Selalu cek pengumuman resmi sebelum mendaftar.</strong> Deadline bisa diperpanjang atau ditutup lebih awal oleh perusahaan. Program bertanda "Perlu dicek" memiliki informasi deadline yang belum pasti.</p>
     <p>Rekrutmen resmi tidak memungut biaya apa pun. Abaikan pihak yang meminta uang atas nama perusahaan.</p>
@@ -128,6 +198,7 @@ details summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 
 
 <script>
 let JOBS = [];
+const REVIEW_URL = 'https://mt-hunter.myscalev.com/review-cv';
 const BULAN = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
 const fmtTanggal = (iso) => { const [y, m, d] = String(iso).split('-').map(Number); return y && m && d ? `${d} ${BULAN[m - 1]} ${y}` : '–'; };
 const SECTORS = ['Semua', 'Perbankan', 'Pembiayaan & Asuransi', 'FMCG & Distribusi', 'Ritel', 'Manufaktur'];
@@ -172,6 +243,11 @@ function card(j, d, closed) {
   const act = el('div', 'actions');
   if (/^https:\/\//.test(j.link)) { const a = el('a', 'btn', 'Daftar di situs resmi ↗'); a.href = j.link; a.target = '_blank'; a.rel = 'noopener'; act.append(a); }
   if (/^https:\/\//.test(j.sumber)) { const s = el('a', 'src', 'Sumber info'); s.href = j.sumber; s.target = '_blank'; s.rel = 'noopener'; act.append(s); }
+  if (!closed) {
+    const nudge = el('p', 'cv-nudge', 'Sebelum daftar, cek kecocokan CV-mu dengan program ini. ');
+    const r = el('a', 'link-mint', 'Review CV Rp29rb ↗'); r.href = REVIEW_URL; r.target = '_blank'; r.rel = 'noopener';
+    nudge.append(r); b.append(nudge);
+  }
   b.append(act);
   li.append(c, b);
   return li;
