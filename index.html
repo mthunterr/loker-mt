@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Daftar program Management Trainee yang masih buka, dikurasi MT Hunter dan diperbarui setiap hari.">
+<title>Loker MT MT Hunter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@500&display=swap">
+<style>
+/* Layout: MT Hunter's dark green ground with a mint accent. A short hero, a filter bar, then one ruled list where each row leads with a big mint countdown (days left), like the numbered rows of the MT Hunter class outline. Single dark theme by brand choice. */
+:root {
+  color-scheme: dark;
+  --ground: #0c1517;
+  --ground-top: #1f4d3f;
+  --ink: #f2f7f4;
+  --ink-soft: #b9c9c1;
+  --ink-faint: #7f948b;
+  --mint: #74e0ae;
+  --mint-deep: #0f2a22;
+  --rule: rgba(185, 201, 193, .16);
+  --panel: rgba(255, 255, 255, .04);
+  --warn: #f2c46b;
+  --warn-ground: rgba(242, 196, 107, .12);
+  --urgent: #ff9a85;
+  --f-sans: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "DM Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html { background: var(--ground); }
+body { background: radial-gradient(120% 60rem at 0% 0%, var(--ground-top) 0%, var(--ground) 62%) no-repeat, var(--ground); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.55; min-height: 100vh; }
+.wrap { max-width: 64rem; margin: 0 auto; padding-block: 48px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { margin: 0; line-height: 1.15; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mint); }
+.eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--mint); }
+.hero { display: grid; gap: 14px; padding-bottom: 28px; }
+h1 { font-size: clamp(2rem, 6vw, 3.1rem); font-weight: 800; letter-spacing: -.02em; max-width: 18ch; }
+.lede { color: var(--ink-soft); font-size: 1.05rem; max-width: 60ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--ink-soft); font-size: .92rem; padding-top: 4px; }
+.facts b { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.bar { display: grid; gap: 12px; padding-block: 18px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.search { width: 100%; font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 11px 14px; }
+.search::placeholder { color: var(--ink-faint); }
+.search:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; border-color: transparent; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: 600 .88rem var(--f-sans); color: var(--ink-soft); background: transparent; border: 1px solid var(--rule); border-radius: 99px; padding: 7px 14px; cursor: pointer; }
+.chip:hover { border-color: var(--mint); color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--mint); border-color: var(--mint); color: var(--mint-deep); }
+.chip:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+.row-tools { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; font-size: .9rem; color: var(--ink-faint); }
+
+.list { list-style: none; margin: 0; padding: 0; }
+.job { display: grid; grid-template-columns: 7.5rem 1fr; gap: 6px 28px; padding-block: 26px; border-bottom: 1px solid var(--rule); }
+.count { display: grid; align-content: start; gap: 2px; }
+.count .n { font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--mint); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.count .u { font-size: .82rem; color: var(--ink-soft); }
+.count.soon .n { color: var(--urgent); }
+.count.unknown .n { font-size: 1.6rem; color: var(--ink-soft); }
+.body { display: grid; gap: 10px; min-width: 0; }
+.title { font-size: 1.22rem; font-weight: 700; }
+.co { color: var(--ink-soft); font-size: .95rem; }
+.co .sek { color: var(--ink-faint); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-family: var(--f-mono); font-size: .74rem; color: var(--ink-soft); border: 1px solid var(--rule); border-radius: 6px; padding: 2px 8px; }
+.tag.warn { color: var(--warn); border-color: transparent; background: var(--warn-ground); }
+.dl { font-size: .9rem; color: var(--ink-soft); }
+.dl b { color: var(--ink); font-weight: 600; }
+details summary { cursor: pointer; color: var(--mint); font-weight: 600; font-size: .92rem; list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: " +"; }
+details[open] summary::after { content: " −"; }
+details summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; border-radius: 4px; }
+.more { display: grid; gap: 10px; padding-top: 10px; font-size: .94rem; color: var(--ink-soft); max-width: 70ch; }
+.more h4 { margin: 0; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-top: 2px; }
+.btn { display: inline-flex; align-items: center; gap: 6px; font: 700 .92rem var(--f-sans); text-decoration: none; background: var(--mint); color: var(--mint-deep); border-radius: 10px; padding: 9px 16px; }
+.btn:hover { filter: brightness(1.08); }
+.btn:focus-visible, .src:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+.src { font-size: .88rem; color: var(--ink-faint); text-underline-offset: 3px; }
+.empty { padding-block: 40px; color: var(--ink-soft); }
+.closed-h { padding-top: 36px; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+.job.closed { opacity: .55; }
+
+.foot { display: grid; gap: 8px; padding-top: 36px; color: var(--ink-faint); font-size: .88rem; max-width: 70ch; }
+.foot strong { color: var(--ink-soft); }
+
+@media (max-width: 600px) {
+  .wrap { padding-block: 32px 56px; }
+  .job { grid-template-columns: 1fr; }
+  .count { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 8px; }
+  .count .n { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+
+<main class="wrap">
+  <header class="hero">
+    <span class="eyebrow">MT Hunter · Loker MT</span>
+    <h1>Program Management Trainee yang masih buka</h1>
+    <p class="lede">Daftar program MT dari perusahaan kredibel yang dikurasi tim MT Hunter, diurutkan dari deadline terdekat. Tanpa MLM, pialang, atau rekrutmen agen.</p>
+    <p class="facts"><span>Update <b id="updated"></b></span><span><b id="nOpen">0</b> program buka</span><span><b id="nWeek">0</b> tutup dalam 7 hari</span></p>
+  </header>
+
+  <section class="bar" aria-label="Saring lowongan">
+    <input class="search" id="q" type="search" placeholder="Cari perusahaan, program, atau jurusan" aria-label="Cari lowongan">
+    <div class="chips" id="sectors" role="group" aria-label="Sektor"></div>
+    <div class="row-tools"><span id="countLabel"></span></div>
+  </section>
+
+  <ul class="list" id="list"></ul>
+  <div id="closedWrap" hidden>
+    <p class="closed-h">Sudah tutup</p>
+    <ul class="list" id="closedList"></ul>
+  </div>
+
+  <footer class="foot">
+    <p><strong>Selalu cek pengumuman resmi sebelum mendaftar.</strong> Deadline bisa diperpanjang atau ditutup lebih awal oleh perusahaan. Program bertanda "Perlu dicek" memiliki informasi deadline yang belum pasti.</p>
+    <p>Rekrutmen resmi tidak memungut biaya apa pun. Abaikan pihak yang meminta uang atas nama perusahaan.</p>
+  </footer>
+</main>
+
+<script>
+let JOBS = [];
+const BULAN = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+const fmtTanggal = (iso) => { const [y, m, d] = String(iso).split('-').map(Number); return y && m && d ? `${d} ${BULAN[m - 1]} ${y}` : '–'; };
+const SECTORS = ['Semua', 'Perbankan', 'Pembiayaan & Asuransi', 'FMCG & Distribusi', 'Ritel', 'Manufaktur'];
+const DAY = 86400000;
+const today = new Date(); today.setHours(0, 0, 0, 0);
+const daysLeft = (iso) => { if (!iso) return null; const [y, m, d] = iso.split('-').map(Number); return Math.round((new Date(y, m - 1, d) - today) / DAY); };
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+
+let sector = 'Semua';
+let query = '';
+try { const s = localStorage.getItem('mth-sector'); if (SECTORS.includes(s)) sector = s; } catch (e) {}
+
+SECTORS.forEach((s) => {
+  const b = el('button', 'chip', s); b.type = 'button';
+  b.addEventListener('click', () => { sector = s; try { localStorage.setItem('mth-sector', s); } catch (e) {} render(); });
+  $('sectors').append(b);
+});
+$('q').addEventListener('input', (e) => { query = e.target.value.trim().toLowerCase(); render(); });
+
+function card(j, d, closed) {
+  const li = el('li', 'job' + (closed ? ' closed' : ''));
+  const c = el('div', 'count');
+  if (d == null) { c.classList.add('unknown'); c.append(el('span', 'n', '?'), el('span', 'u', 'deadline belum pasti')); }
+  else if (closed) { c.append(el('span', 'n', '–'), el('span', 'u', 'sudah tutup')); }
+  else if (d === 0) { c.classList.add('soon'); c.append(el('span', 'n', 'Hari ini'), el('span', 'u', 'hari terakhir')); c.querySelector('.n').style.fontSize = '1.7rem'; }
+  else { if (d <= 3) c.classList.add('soon'); c.append(el('span', 'n', String(d)), el('span', 'u', 'hari lagi')); }
+  const b = el('div', 'body');
+  b.append(el('h2', 'title', j.program));
+  const co = el('p', 'co', j.perusahaan + ' '); co.append(el('span', 'sek', '· ' + j.sektor)); b.append(co);
+  const tags = el('div', 'tags');
+  j.tags.forEach(t => tags.append(el('span', 'tag', t)));
+  if (j.cek) tags.append(el('span', 'tag warn', 'Perlu dicek'));
+  b.append(tags);
+  const dl = el('p', 'dl'); dl.append('Deadline: '); dl.append(el('b', '', j.deadline)); b.append(dl);
+  const det = el('details');
+  det.append(el('summary', '', 'Syarat & detail program'));
+  const more = el('div', 'more');
+  more.append(el('h4', '', 'Syarat'), el('p', '', j.syarat), el('h4', '', 'Tentang program'), el('p', '', j.info), el('h4', '', 'Tentang perusahaan'), el('p', '', j.tentang));
+  if (j.status) { more.append(el('h4', '', 'Status'), el('p', '', j.status)); }
+  det.append(more); b.append(det);
+  const act = el('div', 'actions');
+  if (/^https:\/\//.test(j.link)) { const a = el('a', 'btn', 'Daftar di situs resmi ↗'); a.href = j.link; a.target = '_blank'; a.rel = 'noopener'; act.append(a); }
+  if (/^https:\/\//.test(j.sumber)) { const s = el('a', 'src', 'Sumber info'); s.href = j.sumber; s.target = '_blank'; s.rel = 'noopener'; act.append(s); }
+  b.append(act);
+  li.append(c, b);
+  return li;
+}
+
+function render() {
+  document.querySelectorAll('#sectors .chip').forEach(b => b.setAttribute('aria-pressed', String(b.textContent === sector)));
+  const all = JOBS.map(j => ({ j, d: daysLeft(j.iso) }));
+  const open = all.filter(x => x.d == null || x.d >= 0);
+  $('nOpen').textContent = open.length;
+  $('nWeek').textContent = open.filter(x => x.d != null && x.d <= 7).length;
+  const match = (x) => (sector === 'Semua' || x.j.sektor === sector) &&
+    (!query || [x.j.program, x.j.perusahaan, x.j.syarat, x.j.sektor].join(' ').toLowerCase().includes(query));
+  const shown = open.filter(match).sort((a, b) => (a.d ?? 1e9) - (b.d ?? 1e9));
+  const closed = all.filter(x => x.d != null && x.d < 0).filter(match);
+  $('list').replaceChildren(...shown.map(x => card(x.j, x.d, false)));
+  if (!shown.length) $('list').append(el('li', 'empty', query ? `Tidak ada program yang cocok dengan "${query}".` : 'Tidak ada program buka di sektor ini.'));
+  $('closedList').replaceChildren(...closed.map(x => card(x.j, x.d, true)));
+  $('closedWrap').hidden = !closed.length;
+  $('countLabel').textContent = `Menampilkan ${shown.length} dari ${open.length} program yang masih buka`;
+}
+$('list').replaceChildren(el('li', 'empty', 'Memuat lowongan…'));
+fetch('data.json', { cache: 'no-cache' })
+  .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then((data) => {
+    JOBS = Array.isArray(data.jobs) ? data.jobs : [];
+    $('updated').textContent = fmtTanggal(data.updated);
+    render();
+  })
+  .catch(() => { $('list').replaceChildren(el('li', 'empty', 'Data lowongan gagal dimuat. Muat ulang halaman ini dalam beberapa saat.')); });
+</script>
+
+</body>
+</html>
