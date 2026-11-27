@@ -9,7 +9,7 @@ Dokumen ini dipakai oleh tugas terjadwal Claude yang memperbarui `data.json` set
    - Buka sumber dan link pendaftarannya. Perbarui deadline, status, dan syarat kalau berubah (diperpanjang, ditutup lebih awal, kuota penuh).
    - Program yang deadline-nya sudah lewat lebih dari 7 hari: hapus dari `data.json`. Yang baru lewat tidak perlu dihapus; halaman otomatis memindahkannya ke "Sudah tutup".
 3. Cari program MT baru yang sedang buka (lihat "Yang boleh masuk").
-4. Tambahkan hanya program yang deadline-nya bisa dipastikan dari minimal satu sumber yang bisa dibuka, dan link pendaftarannya mengarah ke portal resmi perusahaan atau portal rekrutmen resminya.
+4. Tambahkan hanya program yang status bukanya bisa dipastikan dari minimal satu sumber yang bisa dibuka (deadline yang masih berlaku, atau lowongan resmi yang masih aktif di situs karier perusahaan), dan link pendaftarannya mengarah ke portal resmi perusahaan atau portal rekrutmen resminya.
 5. Ubah `updated` ke tanggal hari ini (WIB, format `YYYY-MM-DD`).
 6. Jalankan `python3 scripts/validate.py`. Jangan lanjut kalau gagal.
 7. Commit, push branch, lalu buka pull request ke `main` dengan ringkasan: program baru, program yang dihapus, dan perubahan deadline atau syarat. Tulis juga program yang ditandai "Perlu dicek" dan alasannya.
