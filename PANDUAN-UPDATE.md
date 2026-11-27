@@ -15,6 +15,17 @@ Dokumen ini dipakai oleh tugas terjadwal Claude yang memperbarui `data.json` set
 7. Commit, push branch, lalu buka pull request ke `main` dengan ringkasan: program baru, program yang dihapus, dan perubahan deadline atau syarat. Tulis juga program yang ditandai "Perlu dicek" dan alasannya.
 8. Kalau tidak ada perubahan selain tanggal, tetap buka pull request dengan ringkasan "Tidak ada perubahan lowongan".
 
+## Situs yang wajib dicek setiap hari
+
+Berita lowongan sering terlambat atau tidak memuat program perusahaan multinasional. Selain pencarian web, buka langsung halaman karier berikut dan cari kata "management trainee", "graduate", "development program", atau "ODP" dengan lokasi Indonesia:
+
+- FMCG dan multinasional: jobs.colgate.com, careers.unilever.com, nestle.co.id/jobs, careers.danone.com, pgcareers.com, career.indofood.com
+- Grup usaha: career.astra.co.id
+- Perbankan: karir.bca.co.id, bankmandiri.co.id/karir, e-recruitment.bri.co.id, recruitment.bni.co.id, jobs.talentics.id
+- BUMN: rekrutmenbersama.fhcibumn.id
+
+Kalau sebuah situs tidak bisa dibuka, catat di ringkasan pull request supaya pemilik repo bisa mengeceknya manual. Lowongan resmi tanpa deadline boleh masuk dengan `iso: null`, `cek: true`, dan status yang menyebut deadline tidak dicantumkan.
+
 ## Yang boleh masuk
 
 - Program Management Trainee, ODP, graduate program, future leader program, atau sejenisnya untuk fresh graduate dan early career.
