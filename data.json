@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "jobs": [
     {
       "program": "Management Trainee Distribution Development",
@@ -9,7 +9,7 @@
       "info": "Program pengembangan di bidang penjualan dan distribusi: kunjungan outlet, pengembangan jaringan distribusi, pemantauan target penjualan, analisis pasar, dan supervisi tim sales. Pendaftaran melalui portal karier Unair.",
       "deadline": "28 November 2026",
       "iso": "2026-11-28",
-      "status": "Masih buka, tutup besok (khusus alumni Unair)",
+      "status": "Masih buka, tutup hari ini (khusus alumni Unair)",
       "link": "https://career.unair.ac.id",
       "sumber": "https://optika.id/2026/11/23/pt-sejati-group-buka-lowongan-kerja-management-trainee-fresh-graduate-unair-bisa-mendaftar/",
       "sektor": "FMCG & Distribusi",
@@ -21,6 +21,25 @@
       "cek": false
     },
     {
+      "program": "LEAD Management Trainee (LEAD 2027)",
+      "perusahaan": "Gunung Sewu Group (Gunung Sewu Kencana)",
+      "tentang": "Grup usaha Indonesia yang bergerak di bidang pangan, asuransi, properti, manufaktur, dan consumer goods.",
+      "syarat": "Lulusan S1 atau S2 semua jurusan dengan IPK minimal 3,50; fresh graduate dengan pengalaman magang atau profesional dengan pengalaman kerja maksimal 2 tahun; fasih berbahasa Indonesia dan Inggris; bersedia ditempatkan di luar Jakarta.",
+      "info": "Program 24 bulan: bulan 1–2 business bootcamp (300+ jam) dan penugasan nyata, bulan 3–24 tiga rotasi lintas industri di unit pangan, asuransi, properti, manufaktur, dan consumer goods. Jalur cepat menuju posisi Junior Manager dalam 24 bulan.",
+      "deadline": "29 November 2026",
+      "iso": "2026-11-29",
+      "status": "Masih buka, tutup besok",
+      "link": "https://www.kalibrr.com/id-ID/c/gunung-sewu-group/jobs/271435/gunung-sewu-lead-management-trainee-3",
+      "sumber": "https://www.kalibrr.com/id-ID/c/gunung-sewu-group/jobs/271435/gunung-sewu-lead-management-trainee-3",
+      "sektor": "FMCG & Distribusi",
+      "tags": [
+        "S1/S2",
+        "IPK ≥ 3,50",
+        "Maks. 2 thn pengalaman"
+      ],
+      "cek": false
+    },
+    {
       "program": "Management Development Program (MDP) – BCA MT Program 2026 Batch 2",
       "perusahaan": "PT Bank Central Asia Tbk (BCA)",
       "tentang": "Bank swasta terbesar di Indonesia berdasarkan aset dan kapitalisasi pasar, dengan layanan perbankan ritel, transaksi, dan korporasi.",
@@ -28,9 +47,9 @@
       "info": "Program pengembangan intensif dengan training dan mentoring di berbagai fungsi perbankan untuk menyiapkan calon pemimpin BCA. Peserta mendapat tunjangan selama pendidikan.",
       "deadline": "30 November 2026, pukul 23.59 WIB",
       "iso": "2026-11-30",
-      "status": "Masih buka (diperpanjang dari 31 Oktober 2026)",
+      "status": "Masih buka, tutup 30 November 2026 (diperpanjang dari 31 Oktober 2026)",
       "link": "https://karir.bca.co.id/candidate/id/career/management-development-program-mdp",
-      "sumber": "https://www.temankarir.com/2026/10/lowongan-bca-mdp-wmp-2026.html",
+      "sumber": "https://www.idntimes.com/life/career/lowongan-management-trainee-november-2026-c1c2-01-wdyz2-7wq1rl",
       "sektor": "Perbankan",
       "tags": [
         "S1/S2",
@@ -64,11 +83,11 @@
       "tentang": "Bank swasta terbesar di Indonesia berdasarkan aset dan kapitalisasi pasar, dengan layanan perbankan ritel, transaksi, dan korporasi.",
       "syarat": "WNI; mahasiswa tingkat akhir atau fresh graduate; minimal S1 semua jurusan dengan IPK minimal 3,00; usia maksimal 24 tahun untuk S1 dan 26 tahun untuk S2; mampu berbahasa Inggris; berminat pada bidang investasi dan wealth management; memiliki kemampuan analitis dan problem solving; bersedia ditempatkan di seluruh Indonesia.",
       "info": "Program satu tahun di bidang investasi dan wealth management. Lulusan program diangkat sebagai karyawan tetap dan berkarier sebagai Wealth Specialist di kantor cabang BCA.",
-      "deadline": "30 November 2026 (IDN Times menyebut 31 Desember 2026)",
+      "deadline": "30 November 2026 (IDN Times November 2026; sebelumnya ada sumber yang menyebut 31 Desember 2026)",
       "iso": "2026-11-30",
       "status": "Perlu dicek: sumber berbeda soal deadline",
       "link": "https://karir.bca.co.id/candidate/id/career/wealth-management-program-wmp",
-      "sumber": "https://www.temankarir.com/2026/10/lowongan-bca-mdp-wmp-2026.html",
+      "sumber": "https://www.idntimes.com/life/career/lowongan-management-trainee-november-2026-c1c2-01-wdyz2-7wq1rl",
       "sektor": "Perbankan",
       "tags": [
         "S1/S2",
@@ -85,7 +104,7 @@
       "info": "Program pengembangan calon pemimpin dengan fokus strategi bisnis perbankan, transformasi organisasi, manajemen risiko, inovasi produk, dan kepemimpinan. Seleksi tatap muka dilaksanakan di Jakarta.",
       "deadline": "6 Desember 2026",
       "iso": "2026-12-06",
-      "status": "Masih buka (dibuka 19 November 2026)",
+      "status": "Masih buka (dibuka 19 November 2026, tutup 6 Desember 2026)",
       "link": "https://jobs.talentics.id/pt-bank-syariah-indonesia-tbk?tab=jobs",
       "sumber": "https://www.liputan6.com/bisnis/read/8339131/ada-tiga-lowongan-kerja-di-bsi-cek-posisi-hingga-syarat",
       "sektor": "Perbankan",
@@ -104,7 +123,7 @@
       "info": "Program untuk peran bisnis: pengelolaan hubungan nasabah, pengembangan portofolio, pemasaran, dan pencapaian target di unit bisnis BSI.",
       "deadline": "6 Desember 2026",
       "iso": "2026-12-06",
-      "status": "Masih buka (dibuka 19 November 2026)",
+      "status": "Masih buka (dibuka 19 November 2026, tutup 6 Desember 2026)",
       "link": "https://jobs.talentics.id/pt-bank-syariah-indonesia-tbk?tab=jobs",
       "sumber": "https://www.liputan6.com/bisnis/read/8339131/ada-tiga-lowongan-kerja-di-bsi-cek-posisi-hingga-syarat",
       "sektor": "Perbankan",
@@ -123,7 +142,7 @@
       "info": "Program pengembangan talenta teknologi untuk pengembangan sistem, digitalisasi proses bisnis, dan implementasi inovasi dalam transformasi perbankan BSI.",
       "deadline": "6 Desember 2026",
       "iso": "2026-12-06",
-      "status": "Masih buka (dibuka 19 November 2026)",
+      "status": "Masih buka (dibuka 19 November 2026, tutup 6 Desember 2026)",
       "link": "https://jobs.talentics.id/pt-bank-syariah-indonesia-tbk?tab=jobs",
       "sumber": "https://www.liputan6.com/bisnis/read/8339131/ada-tiga-lowongan-kerja-di-bsi-cek-posisi-hingga-syarat",
       "sektor": "Perbankan",
@@ -245,6 +264,25 @@
         "S1/S2",
         "IPK ≥ 3,20",
         "Maks. 18 bln pengalaman"
+      ],
+      "cek": true
+    },
+    {
+      "program": "Management Trainee APP Group",
+      "perusahaan": "APP Group (Asia Pulp & Paper, Sinar Mas)",
+      "tentang": "Produsen pulp dan kertas terintegrasi milik grup Sinar Mas dengan operasi pabrik dan kehutanan di Indonesia.",
+      "syarat": "Fresh graduate S1 atau S2 semua jurusan; IPK minimal 3,50 dari skala 4,00; pengalaman kerja maksimal 2 tahun; mampu berbahasa Inggris dan/atau Mandarin lisan dan tulisan; menguasai Microsoft Office, terutama Excel; kemampuan interpersonal dan manajerial yang baik; bersedia ditempatkan di seluruh Indonesia.",
+      "info": "Pelatihan intensif di kelas dan on-the-job training dengan exposure di Commercial, Mills Operations, Forestry, atau divisi pendukung. Lowongan resmi diunggah 2 September 2026.",
+      "deadline": "Tidak dicantumkan (lowongan resmi masih aktif)",
+      "iso": null,
+      "status": "Perlu dicek: deadline tidak dicantumkan di situs karier resmi",
+      "link": "https://careers.app.co.id/job/Others-Management-Trainee-APP-Group-Bant/50063544/",
+      "sumber": "https://careers.app.co.id/job/Others-Management-Trainee-APP-Group-Bant/50063544/",
+      "sektor": "Manufaktur",
+      "tags": [
+        "S1/S2",
+        "IPK ≥ 3,50",
+        "Maks. 2 thn pengalaman"
       ],
       "cek": true
     }
